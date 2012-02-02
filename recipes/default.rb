@@ -20,14 +20,14 @@
 include_recipe "collectd"
 
 # Include standard plugins
-include_recipe "collectd_plugins::syslog"
-include_recipe "collectd_plugins::cpu"
-include_recipe "collectd_plugins::df"
-include_recipe "collectd_plugins::disk"
-include_recipe "collectd_plugins::interface"
-include_recipe "collectd_plugins::memory"
-include_recipe "collectd_plugins::swap"
-include_recipe "collectd_plugins::load"
+include_recipe "collectd-plugins::syslog"
+include_recipe "collectd-plugins::cpu"
+include_recipe "collectd-plugins::df"
+include_recipe "collectd-plugins::disk"
+include_recipe "collectd-plugins::interface"
+include_recipe "collectd-plugins::memory"
+include_recipe "collectd-plugins::swap"
+include_recipe "collectd-plugins::load"
 
 if node[:collectd][:client] 
   include_recipe "collectd::client"
